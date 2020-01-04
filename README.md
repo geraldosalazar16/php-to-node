@@ -3,7 +3,7 @@ To run this project, follow this steps
 
 1- Clone the repository
 ```
-git clone https://github.com/geraldosalazar16/php-to-node/
+git clone https://github.com/geraldosalazar16/php-to-node.git
 ```
 2- Get into the folder
 ```
