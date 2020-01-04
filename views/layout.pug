@@ -1,0 +1,46 @@
+doctype html
+html
+  head
+    title= 'Track My Maiser'
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="stylesheet", href="/stylesheets/slideshow.css")
+    link(rel="stylesheet", href="/stylesheets/menu.css")
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display&display=swap')
+  body
+    block scripts
+      script(src="https://code.jquery.com/jquery-2.2.0.min.js")
+      script(src="/javascripts/slideshow.js") 
+
+    block header
+      div.header_content
+        h2#the_title Track My
+          br
+          | Maiser
+
+    block slideshow 
+        div#slideshow
+          img(src="/images/slideshow/slideshow1.jpeg", alt="slideshow1")
+          img(src="/images/slideshow/slideshow2.jpeg", alt="slideshow2")
+          img(src="/images/slideshow/slideshow3.jpeg", alt="slideshow3")
+          img(src="/images/slideshow/slideshow4.jpeg", alt="slideshow4")
+        div.text-center
+          div#circle1.circle
+          div#circle2.circle
+          div#circle3.circle
+
+    if authenticated
+      nav#nav-1
+        a.menu-link(href='/app/quickview') Quick View
+        a.menu-link(href='/app/income') Post Income
+        a.menu-link(href='/app/maiser') Post Maiser
+        a.menu-link(href='/app/contact') Contact Us
+        a.menu-link(href='logout') Log Out
+
+    block content
+
+
+    block footer
+      div.smallFont
+        p Registered trademark of Software Solutions LLC
+          br
+          | Content created by: Ruth Davydov 2019

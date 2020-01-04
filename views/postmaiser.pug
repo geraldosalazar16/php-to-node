@@ -1,0 +1,40 @@
+extends layout
+
+block content
+
+    h1 Post Maiser
+    - function getCurrentDate() {
+        - var date = new Date();
+        - const month = paddingCero(date.getMonth()+1);
+        - const day = paddingCero(date.getDate());
+
+        - return `${date.getFullYear()}-${month}-${day}`;
+    - }
+
+
+    - function paddingCero(number) {
+        - if (number < 9) {
+            - return '0' + number;
+        - } else {
+            - return number.toString();
+        - }
+    - }
+
+    if message
+        script alert("#{message}");
+
+    form(method='POST' action='/app/maiser/create')
+        div
+            label(for='zdate') Date:
+            input#zdate(type='date', placeholder='Date' name='zdate' value=`${getCurrentDate()}`)
+        div
+            label(for='payer') Paid By:
+            input#payer(type='text' name='payer')
+        div
+            label(for='amount') Amount:
+            input#amount(type='text' name='amount' placeholder='100')
+        button#submit_btn(type='submit') Submit Maiser
+    
+    if errors
+        each error in errors
+            p.error= error.msg

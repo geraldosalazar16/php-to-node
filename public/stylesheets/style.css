@@ -1,0 +1,97 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+	font-size: 13px;
+	margin: 50;
+	margin-top: 25px;
+	background-color: #AAACB0;
+	text-align:center;
+}
+
+#the_title {
+	font-family: 'Playfair Display', serif;
+	font-size: 60px;
+}
+
+#header_content {
+	padding: 10px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+
+/* Styling for menu */
+a {
+	/* removes under line from links with "a" tag on menu */
+ 	text-decoration: none;
+}
+
+ul {
+	background: #B6C9BB;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+li {
+	color: #896978;
+	background: #896978;
+	display: block;
+	float: left;
+	padding: 1rem;
+	position: relative;
+	text-decoration: none;
+	transition-duration: 0.5s;
+}
+  
+li a {
+  /* Color of menu items */
+  color: black;
+  font-weight: bold;
+}
+
+li:hover,
+li:focus-within {
+    background: #AAACB0;
+    cursor: pointer;
+}
+
+li:focus-within a {
+  outline: none;
+}
+
+ul li ul {
+	background: #F6E4F6;
+	visibility: hidden;
+	opacity: 0;
+	min-width: 5rem;
+	position: absolute;
+	transition: all 0.5s ease;
+	margin-top: 1rem;
+	left: 0;
+	display: none;
+}
+
+ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover,
+ul li ul:focus {
+  visibility: visible;
+  opacity: 1;
+  display: block
+}
+
+ul li ul li {
+    clear: both;
+  	width: 100%;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.error {
+	font-size: 10px;
+	color: red;
+}
+

@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h1 Login
+    a(href="/signup") Sign up
+
+    form(method='POST' action='/login')
+        div
+            label(for='email') Email:
+            input#email(type='email', placeholder='email' name='email')
+        div.form-group
+            label(for='password') Password:
+            input#password(type='password' name='password')
+        button#submit_btn(type='submit') Login
+    
+    if errors
+        each error in errors
+            p.error= error.msg

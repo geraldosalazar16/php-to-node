@@ -1,0 +1,30 @@
+body {
+    margin: 0px;
+  }
+  nav {
+    margin-top: 40px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  }
+  #nav-1 {
+    background: #766C7F;
+  }
+  
+  .menu-link {
+    transition: 0.3s ease;
+    background: #766C7F;
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+    border-top: 4px solid #766C7F;
+    border-bottom: 4px solid #766C7F;
+    padding: 20px 0;
+    margin: 0 20px;
+  }
+  .menu-link:hover {
+    border-top: 4px solid #ffffff;
+    border-bottom: 4px solid #ffffff;
+    padding: 6px 0; 
+  }
+  

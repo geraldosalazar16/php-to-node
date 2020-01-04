@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    h1 Say something to us
+
+    if message
+        script alert("#{message}");
+
+    form(method='POST' action='/app/contact/send')
+        div
+            label(for='name') Name:
+            input#name(type='text', placeholder='Name' name='name')
+        div
+            label(for='email') Email:
+            input#email(type='email', placeholder='email' name='email')
+        div
+            label(for='password') Write something to us:
+            textarea#message(name='message' placeholder="Write something to us")
+        button#submit_btn(type='submit') Send
+    
+    if errors
+        each error in errors
+            p.error= error.msg
